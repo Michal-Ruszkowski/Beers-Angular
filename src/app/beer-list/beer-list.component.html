@@ -1,0 +1,8 @@
+<div class="container">
+    <router-outlet></router-outlet>
+    <h2 class="title">BEER<span class="title--gray">GURU</span></h2>
+    <div class="beers">
+        <app-beer *ngFor="let beer of beers" [beer]="beer"></app-beer>
+    </div>
+    <div class="spinner" *ngIf="loading"></div>
+</div>

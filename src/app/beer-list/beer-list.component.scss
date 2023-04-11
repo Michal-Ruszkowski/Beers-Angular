@@ -1,0 +1,42 @@
+@import '../../variables';
+
+.container {
+    padding: 5vw;
+    position:relative;
+
+    .title {
+        font-size: $size * 2;
+        font-weight: 700;
+        color:$color-main;
+        margin-bottom: 3vw;
+
+        .title--gray {
+            color:$color-second
+        }
+    }
+    
+    .beers {
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .spinner {
+        border: 3px solid $color-second;
+        border-top-color: $color-main;
+        border-radius: 50%;
+        width: $size * 2;
+        height: $size * 2;
+        animation: spin .8s linear infinite;
+        margin: 0 auto;
+      
+        @keyframes spin {
+          to {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+      }
+}
+

@@ -1,0 +1,35 @@
+<div class="container" (click)="redirectToHome($event)">
+    <div class="card" *ngIf="beer">
+        <div class="spinner" *ngIf="loading"></div>
+        <div class="product">
+            <img class="product__img" [src]='beer.image_url' [alt]="beer.name" />
+            <div class="product__info">
+                <h3 class="product__name">{{ beer.name }}</h3>
+                <p class="product__desc">{{ beer.tagline }}</p>
+                <div class="product__line"></div>
+                <p class="product__parameters">
+                    IBU: <span class="product__parameter">{{ beer.ibu }}</span>
+                    ABV: <span class="product__parameter">{{ beer.abv }}</span>
+                    EBC: <span class="product__parameter">{{ beer.ebc }}</span>
+                </p>
+                <p class="product__description">{{ beer.description }}</p>
+                <div class="product__served" *ngIf="beer.food_pairing.length">
+                    <strong>Best served with:</strong>
+                    <ul class="product__list">
+                      <li class="product__servedItem" *ngFor="let item of beer.food_pairing">{{ item }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="more">
+            <strong class="more__text">You might also like:</strong>
+            <div class="more__products">
+                <div class="more__product" *ngFor="let beer of beers" routerLink="/details/{{ beer[0].id }}">
+                    <img class="more__img" [src]="beer[0].image_url" [alt]="beer[0].name" />
+                    <p>{{ beer[0].name }}</p>
+                </div>
+              </div>
+              
+        </div>
+    </div>
+</div>

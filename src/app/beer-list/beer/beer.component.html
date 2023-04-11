@@ -1,0 +1,5 @@
+<div class="beer" routerLink="/details/{{ beer.id }}">
+    <img class="beer__img" [src]="beer.image_url" [alt]="beer.name">
+    <h3 class="beer__name">{{ beer.name }}</h3>
+    <p class="beer__desc">{{ beer.tagline }}</p>
+</div>
