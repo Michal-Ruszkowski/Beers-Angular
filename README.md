@@ -1,3 +1,6 @@
+LIVE - https://michal-ruszkowski.github.io/Beers-Angular
+
+
 # BestBeers
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
